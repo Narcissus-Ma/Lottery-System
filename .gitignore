@@ -1,8 +1,40 @@
-dist/
-deploy_versions/
-.temp/
-.rn_temp/
-node_modules/
-.DS_Store
-.swc
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules
+dist
+dist-ssr
 *.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Rust/Tauri specific
+target/
+src-tauri/target/
+WixTools/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Build outputs
+build/
+out/
+release/

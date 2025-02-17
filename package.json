@@ -1,36 +1,23 @@
 {
   "name": "lottery-system",
+  "private": true,
   "version": "1.0.0",
-  "description": "A desktop lottery system built with Electron",
-  "main": "main.js",
+  "type": "module",
+  "description": "A desktop lottery system built with Tauri",
   "scripts": {
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "electron-builder --win"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "build:windows": "npm run tauri build",
+    "start": "npm run tauri dev"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "electron-store": "^8.1.0"
+    "@tauri-apps/api": "^1.5.2"
   },
   "devDependencies": {
-    "electron": "^28.1.0",
-    "electron-reload": "^2.0.0-alpha.1",
-    "electron-builder": "^24.9.1"
-  },
-  "build": {
-    "appId": "com.lottery.system",
-    "productName": "Lottery System",
-    "win": {
-      "target": "nsis",
-      "icon": "build/icon.ico"
-    }
-  },
-  "electronDownload": {
-    "mirror": "https://npmmirror.com/mirrors/electron/"
-  },
-  "config": {
-    "electron_builder_binaries_mirror": "https://npmmirror.com/mirrors/electron-builder-binaries/",
-    "electron_mirror": "https://npmmirror.com/mirrors/electron/"
+    "@tauri-apps/cli": "^1.5.8",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.0"
   }
 }
