@@ -5,15 +5,32 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "electron-builder --win"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron": "^28.1.0",
     "electron-store": "^8.1.0"
   },
   "devDependencies": {
-    "electron-reload": "^2.0.0-alpha.1"
+    "electron": "^28.1.0",
+    "electron-reload": "^2.0.0-alpha.1",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.lottery.system",
+    "productName": "Lottery System",
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    }
+  },
+  "electronDownload": {
+    "mirror": "https://npmmirror.com/mirrors/electron/"
+  },
+  "config": {
+    "electron_builder_binaries_mirror": "https://npmmirror.com/mirrors/electron-builder-binaries/",
+    "electron_mirror": "https://npmmirror.com/mirrors/electron/"
   }
 }
