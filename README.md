@@ -12,15 +12,15 @@
 ## 安装说明
 
 1. 确保你的系统已安装 Node.js (推荐版本 14.0.0 或更高)
-
 2. 克隆或下载本项目到本地
-
 3. 在项目目录下运行以下命令安装依赖：
+
 ```bash
 npm install
 ```
 
 4. 启动应用：
+
 ```bash
 npm start
 ```
@@ -41,4 +41,9 @@ npm start
 
 - Electron.js
 - HTML/CSS/JavaScript
-- electron-store (用于数据持久化) 
+- electron-store (用于数据持久化)
+
+## 问题记录
+
+- 选项样式问题
+- 删除组后无法再编辑组

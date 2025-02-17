@@ -139,9 +139,10 @@ function renderLotteryCircle(options) {
         const textContainer = document.createElement('div');
         textContainer.style.cssText = `
             position: absolute;
-            left: 30%;
-            transform: rotate(${-startAngle - angleStep/2}deg) translateY(-50%);
-            transform-origin: 0 50%;
+            left: 50%;
+            top: 50%;
+            transform: rotate(${startAngle + angleStep / 2}deg) translate(-50%, -100%);
+            transform-origin: 0 0;
             text-align: center;
             color: white;
             font-weight: bold;
@@ -524,6 +525,7 @@ async function deleteGroup(groupName) {
         }
         
         updateGroupList();
+        updateInputState(false); // 确保输入框状态更新
     } catch (error) {
         console.error('Error deleting group:', error);
         alert('删除组时出错，请重试！');
@@ -554,4 +556,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, 100);
-}); 
+});

@@ -19,7 +19,7 @@ function createWindow() {
     });
 
     mainWindow.loadFile('index.html');
-    mainWindow.webContents.openDevTools(); // 开启调试工具以便查看问题
+    // mainWindow.webContents.openDevTools(); // 开启调试工具以便查看问题
 }
 
 app.whenReady().then(() => {
